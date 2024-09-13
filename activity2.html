@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Class Inheritance</h3>
+     <p id="p1"></p>
+     <p id="p2"></p>
+
+    <script>
+     class car{
+        constructor(brand){
+            this.carname=brand;
+        }
+        present(){
+            return "this is"+this.carname;
+        }
+    }
+        class model extends car{
+         constructor(brand,model){
+            super(brand);
+            this.model=model;
+         }
+         mode(){
+            return " this is "+ this.present()+ "and model is "+ this.model;
+
+         }
+}
+
+     
+     c2=new model(" jeep wrangler ","rubicon")
+     document.getElementById("p1").innerHTML=c2.present();
+     document.getElementById("p2").innerHTML=c2.mode();
+    </script>
+</body>
+</html>
